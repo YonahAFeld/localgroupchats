@@ -10,10 +10,10 @@ export default async function HomePage() {
     <div className="max-w-2xl mx-auto px-6 py-16">
       <div className="mb-14">
         <h1 className="font-serif text-4xl font-semibold text-ink mb-2 whitespace-nowrap">
-          Your neighborhood is more connected than you think.
+          Your neighborhood has group chats.
         </h1>
         <p className="font-serif text-4xl font-semibold mb-3 leading-tight" style={{ color: 'var(--lgc-accent)', fontStyle: 'italic' }}>
-          Find the group.<br />Join the block.
+          Join them.
         </p>
         <p className="text-muted text-base">
           No accounts. No algorithms. Just the link.
