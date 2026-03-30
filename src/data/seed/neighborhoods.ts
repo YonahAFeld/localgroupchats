@@ -1,0 +1,17 @@
+export const LA_NEIGHBORHOODS = [
+  { name: 'Silver Lake',    slug: 'silver-lake' },
+  { name: 'Echo Park',      slug: 'echo-park' },
+  { name: 'Los Feliz',      slug: 'los-feliz' },
+  { name: 'Highland Park',  slug: 'highland-park' },
+  { name: 'Eagle Rock',     slug: 'eagle-rock' },
+  { name: 'Koreatown',      slug: 'koreatown' },
+  { name: 'Mid-City',       slug: 'mid-city' },
+  { name: 'Culver City',    slug: 'culver-city' },
+  { name: 'Santa Monica',   slug: 'santa-monica' },
+  { name: 'Venice',         slug: 'venice' },
+  { name: 'West Hollywood', slug: 'west-hollywood' },
+  { name: 'Brentwood',      slug: 'brentwood' },
+  { name: 'Sherman Oaks',   slug: 'sherman-oaks' },
+  { name: 'Studio City',    slug: 'studio-city' },
+  { name: 'Burbank',        slug: 'burbank' },
+]
