@@ -9,8 +9,9 @@ export default async function HomePage() {
   return (
     <div className="max-w-2xl mx-auto px-6 py-16">
       <div className="mb-14">
-        <h1 className="font-serif text-4xl font-semibold text-ink mb-2 whitespace-nowrap">
-          Your neighborhood has group chats.
+        <h1 className="font-serif text-4xl font-semibold text-ink mb-2">
+          Your neighborhood has{' '}
+          <span style={{ color: 'var(--lgc-accent)', fontStyle: 'italic' }}>group chats.</span>
         </h1>
         <p className="font-serif text-4xl font-semibold mb-3 leading-tight" style={{ color: 'var(--lgc-accent)', fontStyle: 'italic' }}>
           Join them.
@@ -45,7 +46,7 @@ export default async function HomePage() {
       </div>
 
       <p className="text-sm text-muted">
-        Got a group that belongs here?{' '}
+        Got a group chat that belongs here?{' '}
         <Link href="/submit" className="text-accent hover:underline">
           Add it — takes 30 seconds.
         </Link>

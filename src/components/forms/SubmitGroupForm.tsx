@@ -93,7 +93,7 @@ export default function SubmitGroupForm() {
           value={form.name}
           onChange={handleChange}
           required
-          placeholder="e.g. Silver Lake Parents, Echo Park Buy Nothing"
+          placeholder="e.g. Silver Lake Parents Group Chat"
           className="w-full rounded-lg bg-paper px-3 py-2 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent" style={{ border: '0.5px solid var(--lgc-border)' }}
         />
       </div>

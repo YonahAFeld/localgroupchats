@@ -85,7 +85,7 @@ export default async function CategoryPage({ params }: Props) {
           </h1>
           <p className="text-muted">
             {groups.length > 0
-              ? `${groups.length} group${groups.length !== 1 ? 's' : ''} listed · tap to join directly.`
+              ? `${groups.length} group chat${groups.length !== 1 ? 's' : ''} listed · tap to join directly.`
               : 'Nothing listed here yet — you could be the first.'}
           </p>
         </div>
@@ -97,7 +97,7 @@ export default async function CategoryPage({ params }: Props) {
             className="rounded-xl p-12 text-center"
             style={{ border: '0.5px dashed var(--lgc-border)' }}
           >
-            <p className="text-muted mb-4">No groups listed here yet. If one exists, your neighbors would love to find it.</p>
+            <p className="text-muted mb-4">No group chats listed here yet. If one exists, your neighbors would love to find it.</p>
             <Link
               href="/submit"
               className="inline-block bg-accent text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
@@ -111,7 +111,7 @@ export default async function CategoryPage({ params }: Props) {
           className="mt-12 rounded-xl bg-paper p-6 text-center"
           style={{ border: '0.5px solid var(--lgc-border)' }}
         >
-          <p className="text-muted mb-3">Know a group that should be here? Takes 30 seconds to add.</p>
+          <p className="text-muted mb-3">Know a group chat that should be here? Takes 30 seconds to add.</p>
           <Link
             href="/submit"
             className="inline-block bg-accent text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
