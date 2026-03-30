@@ -4,6 +4,16 @@ import { useState, useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import type { Neighborhood, Category, Platform } from '@/types'
 
+const CATEGORY_PLACEHOLDERS: Record<string, string> = {
+  'buy-sell-donate':         'e.g. Free furniture, garage sales, things people no longer need',
+  'safety-alerts':           'e.g. Heads up on break-ins, lost pets, anything the block should know',
+  'recommendations':         'e.g. Who\'s got a good plumber? Best tacos nearby? Ask here.',
+  'parents-schools':         'e.g. Parents from Lincoln Elementary, carpools, school news',
+  'housing':                 'e.g. Rentals, roommates, subletting — stuff not on Zillow',
+  'sport-meetups':           'e.g. Sunday pick-up soccer, running club, anyone welcome',
+  'local-politics-planning': 'e.g. City council updates, zoning meetings, neighborhood input',
+}
+
 const PLATFORMS: { value: Platform; label: string; placeholder: string }[] = [
   { value: 'whatsapp', label: 'WhatsApp',           placeholder: 'https://chat.whatsapp.com/…' },
   { value: 'telegram', label: 'Telegram',           placeholder: 'https://t.me/…' },
@@ -156,7 +166,7 @@ export default function SubmitGroupForm() {
           value={form.description}
           onChange={handleChange}
           rows={3}
-          placeholder="Who is this for? e.g. Parents of kids at Ivanhoe Elementary, active since 2021"
+          placeholder={CATEGORY_PLACEHOLDERS[categories.find((c) => c.id === form.category_id)?.slug ?? ''] ?? 'What is this group about? Who is it for?'}
           className="w-full rounded-lg bg-paper px-3 py-2 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent" style={{ border: '0.5px solid var(--lgc-border)' }}
         />
       </div>
