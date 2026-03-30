@@ -10,19 +10,19 @@ export default async function HomePage() {
     <div className="max-w-2xl mx-auto px-6 py-16">
       <div className="mb-14">
         <h1 className="font-serif text-4xl font-semibold text-ink mb-2 whitespace-nowrap">
-          Your neighborhood has a group chat.
+          Your neighborhood is more connected than you think.
         </h1>
         <p className="font-serif text-4xl font-semibold mb-3 leading-tight" style={{ color: 'var(--lgc-accent)', fontStyle: 'italic' }}>
-          Find it.<br />Join it.
+          Find the group.<br />Join the block.
         </p>
         <p className="text-muted text-base">
-          No accounts. No ads. Just the link.
+          No accounts. No algorithms. Just the link.
         </p>
       </div>
 
       <div className="mb-12">
         <p className="text-xs font-medium uppercase tracking-widest text-muted mb-5">
-          Browse by city
+          Where do you live?
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {cities.map((city) => (
@@ -45,9 +45,9 @@ export default async function HomePage() {
       </div>
 
       <p className="text-sm text-muted">
-        Know a group chat that should be here?{' '}
+        Got a group that belongs here?{' '}
         <Link href="/submit" className="text-accent hover:underline">
-          List it.
+          Add it — takes 30 seconds.
         </Link>
       </p>
     </div>

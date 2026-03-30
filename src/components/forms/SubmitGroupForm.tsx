@@ -68,8 +68,8 @@ export default function SubmitGroupForm() {
   if (status === 'success') {
     return (
       <div className="rounded-xl bg-paper p-8 text-center" style={{ border: '0.5px solid var(--lgc-border)' }}>
-        <p className="font-serif text-xl text-ink mb-2">Got it.</p>
-        <p className="text-muted">Under review. We&apos;ll add it within 24 hours.</p>
+        <p className="font-serif text-xl text-ink mb-2">You&apos;re a good neighbor.</p>
+        <p className="text-muted">We&apos;ll review it and have it live within 24 hours.</p>
       </div>
     )
   }
@@ -83,7 +83,7 @@ export default function SubmitGroupForm() {
           value={form.name}
           onChange={handleChange}
           required
-          placeholder="e.g. Silver Lake Parents"
+          placeholder="e.g. Silver Lake Parents, Echo Park Buy Nothing"
           className="w-full rounded-lg bg-paper px-3 py-2 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent" style={{ border: '0.5px solid var(--lgc-border)' }}
         />
       </div>
@@ -156,7 +156,7 @@ export default function SubmitGroupForm() {
           value={form.description}
           onChange={handleChange}
           rows={3}
-          placeholder="What is this group about?"
+          placeholder="Who is this for? e.g. Parents of kids at Ivanhoe Elementary, active since 2021"
           className="w-full rounded-lg bg-paper px-3 py-2 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent" style={{ border: '0.5px solid var(--lgc-border)' }}
         />
       </div>
@@ -171,7 +171,7 @@ export default function SubmitGroupForm() {
           placeholder="you@example.com"
           className="w-full rounded-lg bg-paper px-3 py-2 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent" style={{ border: '0.5px solid var(--lgc-border)' }}
         />
-        <p className="text-xs text-muted mt-1">Not shown publicly. Only used if we need to follow up.</p>
+        <p className="text-xs text-muted mt-1">Never shown publicly. Only if we have a question about your submission.</p>
       </div>
 
       {status === 'error' && (
@@ -183,7 +183,7 @@ export default function SubmitGroupForm() {
         disabled={status === 'loading'}
         className="w-full bg-accent text-white py-2.5 rounded-lg font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
       >
-        {status === 'loading' ? 'Submitting…' : 'List group chat'}
+        {status === 'loading' ? 'Sending…' : 'List this group chat'}
       </button>
     </form>
   )

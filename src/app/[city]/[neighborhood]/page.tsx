@@ -48,7 +48,7 @@ export default async function NeighborhoodPage({ params }: Props) {
       <h1 className="font-serif text-3xl font-semibold text-ink mb-1">
         {neighborhood.name}
       </h1>
-      <p className="text-muted mb-10">Browse by category.</p>
+      <p className="text-muted mb-10">What kind of group are you looking for?</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {categories.map((cat) => (
