@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import type { Neighborhood, Category, Platform } from '@/types'
 
-const PLATFORMS: { value: Platform; label: string }[] = [
-  { value: 'whatsapp', label: 'WhatsApp' },
-  { value: 'telegram', label: 'Telegram' },
-  { value: 'discord', label: 'Discord' },
-  { value: 'signal', label: 'Signal' },
-  { value: 'facebook', label: 'Facebook / Messenger' },
-  { value: 'nextdoor', label: 'Nextdoor' },
-  { value: 'other', label: 'Other' },
+const PLATFORMS: { value: Platform; label: string; placeholder: string }[] = [
+  { value: 'whatsapp', label: 'WhatsApp',           placeholder: 'https://chat.whatsapp.com/…' },
+  { value: 'telegram', label: 'Telegram',           placeholder: 'https://t.me/…' },
+  { value: 'discord',  label: 'Discord',            placeholder: 'https://discord.gg/…' },
+  { value: 'signal',   label: 'Signal',             placeholder: 'https://signal.group/…' },
+  { value: 'facebook', label: 'Facebook / Messenger', placeholder: 'https://www.facebook.com/groups/…' },
+  { value: 'nextdoor', label: 'Nextdoor',           placeholder: 'https://nextdoor.com/…' },
+  { value: 'other',    label: 'Other',              placeholder: 'https://…' },
 ]
 
 export default function SubmitGroupForm() {
@@ -112,7 +112,7 @@ export default function SubmitGroupForm() {
           value={form.join_url}
           onChange={handleChange}
           required
-          placeholder="https://chat.whatsapp.com/…"
+          placeholder={PLATFORMS.find((p) => p.value === form.platform)?.placeholder ?? 'https://…'}
           className="w-full rounded-lg bg-paper px-3 py-2 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent" style={{ border: '0.5px solid var(--lgc-border)' }}
         />
       </div>
