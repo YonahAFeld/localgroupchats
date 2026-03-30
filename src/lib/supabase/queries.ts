@@ -1,21 +1,10 @@
-import { createClient as createServerClient } from './server'
 import { createClient as createBrowserClient } from '@supabase/supabase-js'
 
-// Use during generateStaticParams (no request context available)
-function createStaticClient() {
+function createClient() {
   return createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
   )
-}
-
-// Use inside page/component render (has request context)
-function createClient() {
-  try {
-    return createServerClient()
-  } catch {
-    return createStaticClient()
-  }
 }
 import type { City, Neighborhood, Category, Group, BlogPost, NeighborhoodWithCount, CategoryWithCount } from '@/types'
 
