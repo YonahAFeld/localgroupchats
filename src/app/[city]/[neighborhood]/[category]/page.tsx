@@ -12,6 +12,7 @@ import GroupList from '@/components/groups/GroupList'
 import JsonLd from '@/components/seo/JsonLd'
 
 export const revalidate = 3600
+export const dynamicParams = true
 
 interface Props {
   params: { city: string; neighborhood: string; category: string }
